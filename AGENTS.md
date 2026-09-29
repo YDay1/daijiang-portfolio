@@ -12,5 +12,7 @@
 
 - `portfolio/` 按主站引用路径保存图片；项目子目录使用英文项目名，例如 `keeta/`。
 - Keeta 当前详情使用 `portfolio/projects-20260922/keeta/1.png` 到 `33.png` 的 3840px 高清无损切片，来源为 `D:/dsktop/作品集拼接最新/keeta.pdf`。保留旧资源；不发布 `qa-*`、manifest、验证脚本或中断生成的草稿。
-- 发布前校验所有本地资源引用，并验证四个项目的点击放大、还原和双向滚动。
+- 发布前校验所有本地资源引用，并验证所有项目的点击放大、还原和双向滚动。
 - 删除不再使用的资源须先征得用户同意。
+
+- 拼多多项目使用 `portfolio/projects-20260929/pinduoduo/1.png` 到 `5.png`，3840px 无损切片；不发布源 PDF、cover、manifest 或 QA 文件。
