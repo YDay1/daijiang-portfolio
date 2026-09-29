@@ -1439,6 +1439,7 @@
                     "title": "拼多多邮件审核平台设计",
                     "date": "",
                     "subtitle": "拼多多交互设计测试题",
+                    "unlitCover": true,
                     "desc": "风控团队每天需处理大量机器初筛后的疑似风险邮件，现有邮箱与本地文档协作方式存在频繁切换、风险记录脱离上下文与复核承接困难等问题；负责邮件风险审核平台体验设计，覆盖审核看板、审核工作台、复核流转与审核记录，基于现状流程拆解与人机能力边界分析，梳理任务承接、风险取证、记录沉淀与复核交接等关键问题，输出信息架构、交互流程与高保真方案，构建连续的人工审核闭环。",
                     "color": "#427bff",
                     "imgFolder": "portfolio/projects-20260929/pinduoduo/",
@@ -1583,7 +1584,10 @@
                 }
 
                 const texture = new THREE.CanvasTexture(canvas2d);
-                const mat = new THREE.MeshStandardMaterial({ map: texture, roughness: 0.4, metalness: 0.1, transparent: true, opacity: 0, side: THREE.DoubleSide, depthWrite: false });
+                // Preserve the pale cover's original colors without scene lighting clipping highlights.
+                const mat = projectData[i].unlitCover
+                    ? new THREE.MeshBasicMaterial({ map: texture, toneMapped: false, transparent: true, opacity: 0, side: THREE.DoubleSide, depthWrite: false })
+                    : new THREE.MeshStandardMaterial({ map: texture, roughness: 0.4, metalness: 0.1, transparent: true, opacity: 0, side: THREE.DoubleSide, depthWrite: false });
                 const mesh = new THREE.Mesh(geo, mat);
                 scene.add(mesh);
                 cardMeshes.push({ mesh, index: i });
