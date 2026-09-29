@@ -16,3 +16,11 @@
 - 删除不再使用的资源须先征得用户同意。
 
 - 拼多多项目使用 `portfolio/projects-20260929/pinduoduo/1.png` 到 `5.png`，3840px 无损切片；不发布源 PDF、cover、manifest 或 QA 文件。
+
+## Automatic Website Publishing
+
+- User authorization (2026-09-29): after requested website changes pass verification, commit and push the relevant site changes to the existing GitHub Pages release automatically, then verify the live version. No repeat confirmation is needed for this website publication. Other destructive operations remain subject to confirmation.
+
+## Xiaohongshu Project
+
+- `portfolio/projects-20260929/xiaohongshu/` stores numbered 3840px lossless PNG slices from `D:/dsktop/杨岱江 - 福州大学-27届小红书体验设计测试13859951216.pdf`. Keep `cover.png` and `manifest.json` local only; publish referenced numbered PNGs. Helpers and visual QA belong in `tmp/pdfs/qa-portfolio-*`; retain previous assets.
